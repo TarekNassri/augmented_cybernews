@@ -5,8 +5,7 @@ import os
 
 from joblib import Parallel, delayed
 from tqdm import tqdm
-from datetime import datetime, timedelta, date
-import numpy as np
+from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 from undetected_chromedriver import Chrome
 from selenium.webdriver.chrome.options import Options
@@ -428,13 +427,12 @@ class JazeeraScraper:
 
 if __name__ == "__main__":
     argparser = argparse.ArgumentParser()
-    argparser.add_argument("--search_terms", "-q", dest="search_terms", type=str)
-    argparser.add_argument("--start_date", "-s", dest="start_date", type=str)
-    argparser.add_argument("--end_date", "-e", dest="end_date", type=str)
+    argparser.add_argument("--search_terms", "-q", dest="search_terms", default="fifa qatar", type=str, help="Search terms for scraping")
+    argparser.add_argument("--start_date", "-s", dest="start_date", default="01-01-2010", type=str, help="Start date of the scrape time area. Format: DD-MM-YYYY")
+    argparser.add_argument("--end_date", "-e", dest="end_date", default="31-12-2023", type=str, help="End date of the scrape time area. Format: DD-MM-YYYY")
     argparser.add_argument("--path", "-p", type=str, dest="path", help="Path to save crawl to / load it from", default="test_crawl")
-    argparser.add_argument("--num_workers", "-w", dest="num_workers",type=int, default=-1, help="Number of parallel workers to use. Default: -1 (all available)")
+    argparser.add_argument("--num_workers", "-w", dest="num_workers", type=int, default=-1, help="Number of parallel workers to use. Default: -1 (all available)")
     args = argparser.parse_args()
-
     
     if args.path[-1] == "/":
         args.path = args.path[:-1]
