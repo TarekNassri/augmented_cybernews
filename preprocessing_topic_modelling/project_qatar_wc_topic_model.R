@@ -1,8 +1,8 @@
 options(stringsAsFactors = FALSE)
 
-################################################################################
+##################################################
 # Import Packages
-################################################################################
+##################################################
 
 library(quanteda)
 library(topicmodels)
@@ -457,6 +457,7 @@ serVis(json)
 
 ################################################################################
 # coocurences of topics to terms 'fifa', 'qatar' und 'wordl_cup'
+# (to ensure that our topics have something to do with the investigated subject)
 ################################################################################
 
 sum_coccurrences_topic <- numeric(K)
@@ -479,6 +480,7 @@ for (i in 1:K) {
 
 ################################################################################
 #Log-Likelihood-coocurrences of topics to terms 'fifa', 'qatar' und 'wordl_cup'
+# (to ensure that our topics have something to do with the investigated subject)
 ################################################################################
 sum_LL_topic <- numeric(K)
 
