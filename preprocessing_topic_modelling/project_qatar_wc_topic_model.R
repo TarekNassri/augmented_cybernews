@@ -297,8 +297,8 @@ filtered_theta_aljazeera <- theta[textdata$source == 'aljazeera', ]
 
 terms(topicModel, 10)
 
-#top5termsPerTopic <- terms(topicModel, 5)
-#topicNames <- apply(top5termsPerTopic, 2, paste, collapse=" ")
+top5termsPerTopic <- terms(topicModel, 5)
+topicNames <- apply(top5termsPerTopic, 2, paste, collapse=" ")
 
 #--------------------------------------------------
 # Expolarion of Topic Modelling results
