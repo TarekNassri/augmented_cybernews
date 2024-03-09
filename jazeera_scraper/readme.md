@@ -1,14 +1,20 @@
-Guardian API Scraper
-This Python script scrapes articles related to FIFA and Qatar from The Guardian’s API. It retrieves information such as article URLs, publication dates, and full text content. The scraped data is stored in a list of dictionaries.
 
-Prerequisites
-Python 3.x
-Required libraries: pandas, requests, beautifulsoup4
+# Al Jazeera Scraper
 
-Usage
-Set your Guardian API key in the API_KEY variable.
-Run the script to collect article data.
-The script will fetch articles from multiple pages and extract relevant details.
-The output includes article URLs, publication dates, and full text content.
+This project contains the code for scraping articles from Gurdien.
 
+## Setup
 
+1. make sure you are in the dir this file is located in.
+2. Install the required Python packages:
+
+```sh
+pip install -r requirements.txt
+```
+3. Make sure you have Chrome installed, Selenium requires it.
+4. run the scraper:
+```sh
+python jazeera_scraper.py
+```
+
+If you want to do a custom crawl, use the ```-h``` to find out possible arguments.
