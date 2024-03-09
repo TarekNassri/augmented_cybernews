@@ -10,3 +10,5 @@ Each subproject should contain it's own readme with execution info.
 You will likely use your own choice of programming language and environment. Please create one subdirectory in the git-projects root. Include a readme that explains how to set up and run your project.
 
 Data to be used in further steps (Like CSVs etc) should (if not copyrighted!) be emitted into the data directory, or placed there locally if copyrighted.
+
+test
