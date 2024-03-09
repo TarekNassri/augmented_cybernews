@@ -4,6 +4,9 @@ This Python script scrapes articles related to FIFA and Qatar from The Guardianâ
 Prerequisites
 Python 3.x
 Required libraries: pandas, requests, beautifulsoup4
+pip install requests
+pip install beautifulsoup4
+pip install pandas
 
 Usage
 Set your Guardian API key in the API_KEY variable.
